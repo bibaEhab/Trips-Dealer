@@ -46,12 +46,13 @@ body {
   background-color: #ffa500;
   color: #000;
   font-weight: bold;
-  padding: 13px 84px;
+  padding: 18px 84px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   cursor: pointer;
+  position: absolute;
 }
 
 .who-we-are-image {
@@ -59,7 +60,7 @@ body {
 }
 
 .who-we-are-image img {
-  max-width: 100%;
+  max-width: 80%;
   border-radius: 10px;
 }
 
@@ -142,6 +143,7 @@ body {
   width: 100%;
   object-fit: fill;
   display: block;
+  height: 100%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -208,7 +210,7 @@ body {
   position: absolute;
   z-index: 3;
   left: 110px;
-  top: 80px;
+  top: 113px;
 }
 
 .more-info p {
@@ -319,31 +321,32 @@ body {
   line-height: 140%;
 }
 
+
 /* start offer section */
 .offer-section {
   position: relative;
   width: 100%;
   background: #fff;
 }
-.offer-section .bg-img {
-  height: 500px;
-}
 
 .offer-section .bg-img {
   background-color: #fff;
-  background-image: url("./images/a.png");
-  background-size: cover;
+  background-image: url("./images/eden.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position-x: right;
+  height: 600px;
 }
 
 .offer-text {
   background-color: #ffa500;
   max-width: 55%;
-  padding: 80px 50px 20px;
+  padding: 40px 40px 50px;
   border-end-end-radius: 75%;
   position: relative;
   z-index: 1;
-  height: 100%;
+  height: 600px;
+  align-content: center;
 }
 .offer-section .bg-radius {
   position: absolute;
@@ -354,6 +357,7 @@ body {
   background-color: #222;
   z-index: 0;
   border-bottom-right-radius: 70%;
+  height: 600px;
 }
 .offer-text h2 {
   color: #333;
@@ -367,6 +371,13 @@ body {
   font-weight: bold;
   margin-bottom: 18px;
 }
+.offer-text h4 {
+  color: #222;
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 12px;
+}
+
 .offer-text p {
   margin-bottom: 20px;
   color: #302e2f;
@@ -381,13 +392,15 @@ body {
   border: none;
   border-radius: 4px;
 }
+
 .offer-image {
   width: 100%;
 }
-.offer-image img {
+ .offer-image img {
   border-radius: 10px;
   max-width: 100%;
 }
+
 .offer-price {
   position: absolute;
   bottom: 10px;
@@ -399,14 +412,26 @@ body {
   text-align: center;
   font-weight: 900;
   line-height: 20px;
+  background: orange;
+
 }
+.offer-price .price {
+  margin-top: 20px;
+  margin-bottom: 1rem;}
+
 .offer-price .currency {
   font-size: 15px;
   font-weight: 600;
 }
 
 /* end offer section */
+
+/* start testimonial section */
+
 .testimonial-section {
+  display: flex;
+  position: relative;
+  justify-content: center;
   padding: 50px 20px;
   background-color: #f3ece9;
   text-align: center;
@@ -419,22 +444,45 @@ body {
   color: #333;
   margin-bottom: 50px;
 }
+.testimonial-text h4 {
+  margin: 0;
+  padding-top: 22px;
+  color: #333;
+}
+
 .testimonial-content {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
+
+.testimonial-map .mic {
+    position: absolute;
+    left: -40%;
+    top: -36%;
+    width: 140px;
+    z-index: 0;
+  }
+
+  .testimonial-map .pyramid {
+    position: absolute;
+    left: 169%;
+    top: -35%;
+    width: 100px;
+    z-index: 0;
+  }
+
+  .testimonial-map .shape {
+    position: absolute;
+    left: -44%;
+    bottom: -11%;
+    width: 200px;
+    z-index: 0;
+  }
+
 .testimonial-map {
-  flex: 1;
-  max-width: 600px;
-  margin-right: 20px;
   position: relative;
 }
-.testimonial-map img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
+
 .testimonial-text {
   flex: 1;
   max-width: 500px;
@@ -447,13 +495,10 @@ body {
   border-radius: 50%;
   margin-right: 10px;
 }
-.testimonial-text h4 {
-  margin: 0;
-  color: #333;
-}
 .testimonial-text p {
   color: #666;
   line-height: 140%;
+  margin-bottom: 2rem;
 }
 .testimonial-navigation {
   display: flex;
@@ -471,11 +516,15 @@ body {
   margin: 0 10px;
   cursor: pointer;
 }
+
+/* end testimonial section */
+
 .blog-section {
   padding: 50px 20px;
   text-align: center;
   background-color: #fff;
 }
+
 .blog-section h2 {
   margin-bottom: 10px;
   color: #f9b42b;
@@ -502,9 +551,9 @@ body {
 }
 .blog-post img {
   width: 100%;
-  height: auto;
+  height: 80%;
 }
-.blog-post-date {
+/* .blog-post-date {
   background-color: #333;
   color: #fff;
   position: absolute;
@@ -512,24 +561,33 @@ body {
   right: 15px;
   padding: 10px;
   border-radius: 5px;
-}
-.blog-post-date span {
+} */
+/* .blog-post-date span {
   display: block;
   font-weight: bold;
-}
+} */
 .blog-post-content {
   padding: 20px;
-  text-align: left;
+  text-align: center;
+
+}
+.blog-post-content .link{
+color: #000;
+text-decoration: none;
+font-size: 24px;
+font-weight: bold;
+
 }
 .blog-post-content h4 {
   margin: 0 0 10px;
   color: #333;
+  font-weight: bold;
 }
-.blog-post-content p {
+/* .blog-post-content p {
   margin: 0;
   color: #666;
   line-height: 140%;
-}
+} */
 .contact-section {
   background-color: #333;
   color: #fff;
@@ -581,11 +639,13 @@ body {
 .contact-info h3 {
   margin-top: 0;
   color: #fff;
+  font-weight: bold;
 }
 .contact-info p {
   margin-top: 0;
   color: #fff;
   line-height: 140%;
+  max-width: 500px;
 }
 .contact-info ul {
   list-style: none;
@@ -612,16 +672,14 @@ body {
   background-color: #333;
   color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-evenly;
   padding-top: 20px;
-  padding-right: 40px;
   padding-bottom: 80px;
-  padding-left: 40px;
   position: relative;
 }
-.footer img {
+/* .footer img {
   width: 100px;
-}
+} */
 .footer .description {
   max-width: 300px;
   line-height: 140%;
@@ -669,4 +727,19 @@ body {
   bottom: 0;
   width: 100%;
   left: 0;
+}
+.footerline1 {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 250px;
+  z-index: 1;
+}
+
+.footerline2 {
+  position: absolute;
+  left: 90%;
+  top: -1px;
+  width: 250px;
+  z-index: 1;
 }
